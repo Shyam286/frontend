@@ -1,0 +1,25 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<div class="customBorder">
+            <mat-card class="customMat">
+                <img class="card-img-top"  *ngIf="coupon.couponName=='Flipkart Coupon'" mat-card-sm-image src="../../../assets/flipkart.png" >
+                <img  class="card-img-top" *ngIf="coupon.couponName=='Amazon Coupon'" mat-card-sm-image src="../../../assets/amazon.png" >
+                <img class="card-img-top"  *ngIf="coupon.couponName=='Snapdeal Coupon'" mat-card-sm-image src="../../../assets/snapdeal.png" >
+                <img  class="card-img-top" *ngIf="coupon.couponName=='Myntra Coupon'" mat-card-sm-image src="../../../assets/myntra.png" >
+                <img  class="card-img-top" *ngIf="coupon.couponName=='Zomato Coupon'" mat-card-sm-image src="../../../assets/zomato.png" >
+                <img  class="card-img-top" *ngIf="coupon.couponName=='Swiggy Coupon'" mat-card-sm-image src="../../../assets/swiggy.png" >
+             </mat-card>
+    <div class="card" >
+         <h1 class="card-header">{{coupon.couponName}}</h1>
+            <div class="card-body"> 
+                <div class="desc">
+                    <h2 class="card-title">{{coupon.category}}</h2>
+                    <p class="card-text">{{coupon.desc}}</p>
+                    <button  class="btn btn-primary" target="_blank">{{coupon.couponCode}}</button>
+                </div>
+             </div>
+    </div>
+</div>
+<a href="{{coupon.url}}" class="btn btn-primary textCenter">Visit Site</a>
+<app-footer></app-footer>

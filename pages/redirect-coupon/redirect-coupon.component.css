@@ -1,0 +1,37 @@
+
+h1{
+    font-weight: 550;
+}
+img{
+    width: 100%;
+    
+    height: 10%;
+}
+.desc{
+    float: left;
+   
+}
+.card-body{
+    max-height: 30%;
+ }
+ .customMat{
+     width: 30%;
+    float: right;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-top: 0px;
+
+ }
+
+ .customBorder{
+     margin-left: 10%;
+     margin-right: 10%;
+     margin-top: 5%;
+     border-radius: 5px;
+     border:2px solid rgb(236, 236, 236);
+ }
+ .textCenter{
+     margin-left: 40%;
+     margin-top: 5%;
+     width: 20%;
+ }
