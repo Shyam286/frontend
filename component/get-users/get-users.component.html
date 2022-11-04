@@ -1,0 +1,39 @@
+<body>
+<table class="table" >
+  <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">City</th>
+        <th scope="col">Gender</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+     
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.password}}</td>
+        <td>{{u.city}}</td>
+        <td>{{u.gender}}</td> 
+        <button 
+                mat-flat-button color="warn" class="ml20"
+                (click)="deleteUser(u.id)">
+                Delete
+       </button> 
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+
+
+
+

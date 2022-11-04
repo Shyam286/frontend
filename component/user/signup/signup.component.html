@@ -1,0 +1,121 @@
+<app-header></app-header>
+<div class="bootstrap-wrapper">
+    <div class="container">
+       
+        <div class="row">
+            <div class="col-md-6 offset-md-3"><br>
+
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../../assets/logo.png" alt=""/>
+                    </div>
+                    
+                    <h1 class="text-center">Register</h1><br>
+                    <!-- {{user| json}} -->
+                    <form (ngSubmit)="formSubmit()" >
+                                    <!--name field-->
+                        <div>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="user.name"
+                                name="name"
+                                matInput 
+                                placeholder="Enter Name"
+                                >
+                                <mat-error class="validColor" 
+                                 *ngIf="signUpForm.get('name')?.invalid">
+                                    name required 
+                                </mat-error>
+                            </mat-form-field>
+
+                        </div>
+
+                                    <!--email field-->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="user.email"
+                                name="email"
+                                type="email" matInput placeholder="Enter Email">
+                                
+                                <mat-error class="validColor" 
+                                    *ngIf="signUpForm.get('email')?.invalid">
+                                    Email required 
+                                </mat-error>
+                            </mat-form-field>
+
+                                    <!--username field-->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="user.username"
+                                name="username"
+                                matInput placeholder="Enter Username">
+
+                                <mat-error class="validColor" 
+                                   *ngIf="signUpForm.get('username')?.invalid">
+                                    Username required 
+                                </mat-error>
+                            </mat-form-field>
+
+                                
+                                    <!--password field-->
+                            <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input 
+                                    required
+                                    [(ngModel)]="user.password"
+                                name="password"
+                                    type="password" matInput placeholder="Enter Password">
+
+                                    <mat-error class="validColor" 
+                                        *ngIf="signUpForm.get('password')?.invalid">
+                                         Password required 
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>City</mat-label>
+                                    <input
+                                    required
+                                    [(ngModel)]="user.city"
+                                     name="city"
+                                    matInput placeholder="Enter City">
+
+                                    <mat-error class="validColor" 
+                                        *ngIf="signUpForm.get('city')?.invalid">
+                                         City required 
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>User Id</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="user.id"
+                                name="id"
+                                matInput 
+                                placeholder="Enter Id">
+
+                                <mat-error class="validColor" 
+                                     *ngIf="signUpForm.get('userId')?.invalid">
+                                      UserId required 
+                                </mat-error>
+                            </mat-form-field>
+
+                            <div class="container text-center">
+                                <button type="submit" mat-raised-button color="primary">Register</button>
+
+                            </div>
+
+                                
+                    </form>
+            </mat-card>
+          </div>
+        </div>
+    </div>
+</div>

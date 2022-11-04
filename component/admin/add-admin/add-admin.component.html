@@ -1,0 +1,82 @@
+<mat-card>
+    <h1>Add Admin</h1>  
+    <!-- {{coupon | json}} -->
+      <mat-card-content>
+  
+          <div class="bootstrap-wrapper">
+              <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                  
+                                        
+                    <!-- {{user| json}} -->
+                    <form (ngSubmit)="formSubmit()" >
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Admin Id</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="admin.id"
+                            name="id"
+                            matInput 
+                            placeholder="Enter Id">
+
+                        </mat-form-field>
+
+                                    <!--name field-->
+                        <div>
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="admin.name"
+                                name="name"
+                                matInput 
+                                placeholder="Enter Name"
+                                >
+                            </mat-form-field>
+
+                        </div>
+
+                                    <!--email field-->
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="admin.email"
+                                name="email"
+                                type="email" matInput placeholder="Enter Email">
+  
+                            </mat-form-field>
+
+                                    <!--username field-->
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="admin.username"
+                                name="username"
+                                matInput placeholder="Enter Username">
+                            </mat-form-field>
+
+                                
+                                    <!--password field-->
+                            <mat-form-field class="w100" appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input 
+                                    required
+                                    [(ngModel)]="admin.password"
+                                name="password"
+                                    type="password" matInput placeholder="Enter Password">
+                            </mat-form-field>
+
+                            <div class="container text-center">
+                                <button type="submit" mat-raised-button color="primary">Add</button>
+                            </div>
+
+                                
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

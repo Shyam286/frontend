@@ -1,0 +1,19 @@
+ .example-card{
+     
+    width:100%;
+} 
+.mat-card-sm-image{
+    width: 150px;
+}
+ .card{
+    /* height: 90%;
+    width:80%;
+    margin: 5%; */
+    margin: 20px;
+    height:90%;
+
+} 
+p{
+    font-size: 15px;
+}
+

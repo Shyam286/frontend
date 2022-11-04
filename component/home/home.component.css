@@ -1,0 +1,34 @@
+.example-card{
+     
+    width:100%;
+  } 
+  .mat-card-sm-image{
+    width: 150px;
+  }
+  .card{
+    /* height: 90%;
+    width:80%;
+    margin: 5%; */
+    margin: 20px;
+    height:90%;
+  
+  } 
+  p{
+    font-size: 15px;
+  }
+  .right{
+    margin-left: 80px;
+  }
+  h1{
+  font-weight: 500;
+  margin-left: 27%;
+  }
+  mat-card{
+    background-image: url();
+    background-color: rgb(201, 252, 151);
+    width:50%;
+    margin-left:25%;
+    margin-right: 25%;
+  }
+
+  

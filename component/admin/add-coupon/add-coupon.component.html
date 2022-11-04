@@ -1,0 +1,92 @@
+<mat-card>
+  <h1>Add Coupon</h1>  
+  <!-- {{coupon | json}} -->
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <form (ngSubmit)="formSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Id</mat-label>
+                            <input 
+                            required
+                           type="number"
+                            name="id"
+                            matInput 
+                            placeholder="Enter Id"
+                            [(ngModel)]="coupon.id"
+                            >
+                        </mat-form-field>
+                        
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Coupon Name</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="name"
+                            matInput 
+                            placeholder="Enter Name"
+                            [(ngModel)]="coupon.couponName"
+                            >
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Category</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="category"
+                            matInput 
+                            placeholder="Enter category"
+                            [(ngModel)]="coupon.category"
+                            >
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Coupon Code</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="couponCode"
+                            matInput 
+                            placeholder="Enter CouponCode"
+                            [(ngModel)]="coupon.couponCode"
+                            >
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Url</mat-label>
+                                <input 
+                                required
+                               type="text"
+                                name="Url"
+                                matInput 
+                                placeholder="Enter Url"
+                                [(ngModel)]="coupon.url"
+                                >
+                        </mat-form-field>
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <textarea 
+                            required
+                           type="text"
+                            name="description"
+                            matInput 
+                            placeholder="Enter description"
+                            [(ngModel)]="coupon.desc"
+                            >
+                            </textarea>
+                        </mat-form-field>
+
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary">Add Coupon</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+

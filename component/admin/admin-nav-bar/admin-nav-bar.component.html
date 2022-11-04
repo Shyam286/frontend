@@ -1,0 +1,47 @@
+<mat-toolbar class="navColor">
+
+    <a
+        mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <span>CouponNDeals</span>
+    </a>
+    <span class="example-spacer"></span>
+                <!--Login-->
+    <a
+       *ngIf="!isLoggedIn"
+         [routerLink]="'/signin'"
+         mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon">
+       <p> Sign in</p>
+    </a>
+
+            <!--register-->
+    <a
+        *ngIf="!isLoggedIn"
+          [routerLink]="'/signup'"
+         mat-icon-button 
+         class="example-icon favorite-icon  "
+          aria-label="Example icon-button with heart icon">
+         Register
+    </a>
+
+    <a
+      *ngIf="isLoggedIn"
+        [routerLink]="'/admin/profile'"
+       mat-icon-button 
+       style="margin-right:35px"
+       class="example-icon favorite-icon  "
+        aria-label="Example icon-button with heart icon">
+       {{admin.username}}
+    </a>
+
+            <!--logout-->
+    <a
+      (click)="logout()"
+        *ngIf="isLoggedIn"
+          [routerLink]="'/signup'"
+         mat-icon-button 
+         class="example-icon favorite-icon  "
+          aria-label="Example icon-button with heart icon">
+         Logout
+    </a>
+
+  </mat-toolbar>

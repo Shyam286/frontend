@@ -1,0 +1,111 @@
+
+<mat-card>
+    <h1>Update Coupon</h1>  
+    <!-- {{coupon | json}}-->
+      <mat-card-content>
+          
+  
+          <div class="bootstrap-wrapper">
+              <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                      <form *ngIf="user" (submit)="updateUser()" >
+  
+                          <mat-form-field class="w100" appearance="outline">
+                              <mat-label>Id</mat-label>
+                              <input 
+                              required
+                             type="number"
+                              name="id"
+                              matInput 
+                              placeholder="Enter Id"
+                              [(ngModel)]="user.id"
+                              >
+                          </mat-form-field>
+                          
+                          <mat-form-field class="w100" appearance="outline">
+                              <mat-label>Name</mat-label>
+                              <input 
+                              required
+                             type="text"
+                              name="name"
+                              matInput 
+                              placeholder="Enter Name"
+                              [(ngModel)]="user.name"
+                              >
+                          </mat-form-field>
+  
+                          <mat-form-field class="w100" appearance="outline">
+                              <mat-label>Username</mat-label>
+                              <input 
+                              required
+                             type="text"
+                              name="username"
+                              matInput 
+                              placeholder="Enter username"
+                              [(ngModel)]="user.username"
+                              >
+                          </mat-form-field>
+  
+                          <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="password"
+                            matInput 
+                            placeholder="Enter Password"
+                            [(ngModel)]="user.password"
+                            >
+                        </mat-form-field>
+
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input 
+                                required
+                               type="text"
+                                name="email"
+                                matInput 
+                                placeholder="Enter email"
+                                [(ngModel)]="user.email"
+                                >
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="city"
+                            matInput 
+                            placeholder="Enter city"
+                            [(ngModel)]="user.city"
+                            >
+                         </mat-form-field>
+
+                         <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <input 
+                            required
+                           type="text"
+                            name="gender"
+                            matInput 
+                            placeholder="Enter gender"
+                            [(ngModel)]="user.gender"
+                            >
+                    </mat-form-field>
+  
+                          <div class="container text-center">
+                              <button mat-raised-button color="primary">Update</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </mat-card-content>
+  </mat-card>
+  
+  
+
+<p>update-admin works!</p>
+
+<p>update-user works!</p>

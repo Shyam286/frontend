@@ -1,0 +1,30 @@
+<mat-card>
+   <h1>Cart</h1> 
+</mat-card>
+
+<div *ngFor="let ct of cartList" class="customBorder">
+      <mat-card class="customMat">
+          <img class="card-img-top"  *ngIf="ct.couponList.couponName=='Flipkart Coupon'" mat-card-sm-image src="../../../assets/flipkart.png" >
+          <img  class="card-img-top" *ngIf="ct.couponList.couponName=='Amazon Coupon'" mat-card-sm-image src="../../../assets/amazon.png" >
+          <img class="card-img-top"  *ngIf="ct.couponList.couponName=='Snapdeal Coupon'" mat-card-sm-image src="../../../assets/snapdeal.png" >
+          <img  class="card-img-top" *ngIf="ct.couponList.couponName=='Myntra Coupon'" mat-card-sm-image src="../../../assets/myntra.png" >
+          <img  class="card-img-top" *ngIf="ct.couponList.couponName=='Zomato Coupon'" mat-card-sm-image src="../../../assets/zomato.png" >
+          <img  class="card-img-top" *ngIf="ct.couponList.couponName=='Swiggy Coupon'" mat-card-sm-image src="../../../assets/swiggy.png" >
+     </mat-card>
+
+    <div class="card" >
+          <h1 class="card-header">{{ct.couponList.couponName}}</h1>
+        <div class="card-body"> 
+            <div class="desc">
+                <h2 class="card-title">{{ct.couponList.category}}</h2>
+                <p class="card-text">{{ct.couponList.desc}}</p>
+                <a href="{{ct.couponList.url}}" class="btn btn-primary">{{ct.couponList.couponCode}}</a>
+                <button class="btn btn-primary" color="red"  (click)="deleteCart(ct.cartId)">Delete</button>
+            </div>
+            
+           
+       </div>
+    </div>
+</div>   
+<app-footer></app-footer>
+

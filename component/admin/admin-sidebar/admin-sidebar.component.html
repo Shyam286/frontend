@@ -1,0 +1,12 @@
+<mat-card class="fixedOne">
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item routerLink="/admin/"><mat-icon mat-list-icon>home</mat-icon> Home</button>
+        <button mat-list-item routerLink="/admin/profile" ><mat-icon mat-list-icon>account_circle</mat-icon> Profile</button>
+        <button mat-list-item routerLink="/admin/allCoupon"><mat-icon mat-list-icon>list</mat-icon>Coupon </button>
+        <button mat-list-item routerLink="/admin/addCoupon"><mat-icon mat-list-icon>add</mat-icon> Add Coupon</button>
+        <button mat-list-item routerLink="/admin/getUsers"><mat-icon mat-list-icon>list</mat-icon>Get All User </button>
+        <button mat-list-item routerLink="/admin/addAdmin"><mat-icon mat-list-icon>add</mat-icon> Add Admin</button>
+        <button mat-list-item routerLink="/adminLogin" (click)="logout()"><mat-icon mat-list-icon>logout</mat-icon>Logout </button>
+    </mat-action-list>
+</mat-card>

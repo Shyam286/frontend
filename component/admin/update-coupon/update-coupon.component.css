@@ -1,0 +1,11 @@
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .w100{
+      width: 100%;
+  }
+  h1{
+      font-weight: 600;
+  }

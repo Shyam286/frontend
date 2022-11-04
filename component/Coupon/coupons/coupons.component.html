@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<mat-card >
+    <h2>Coupon list</h2>
+</mat-card>
+<table>
+  
+    <td>
+    <div class="row">
+        <div class="col-md-4 col-sm-8" *ngFor="let c of coupon">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">{{c.couponName}}</h1>
+              <small class="card-subtitle mb-2 text-muted">{{c.category}}</small><br>
+
+              <img class="card-img-top"  *ngIf="c.couponName=='Flipkart Coupon'" mat-card-sm-image src="../../../assets/flipkart.png" >
+              <img  class="card-img-top" *ngIf="c.couponName=='Amazon Coupon'" mat-card-sm-image src="../../../assets/amazon.png" >
+              <img class="card-img-top"  *ngIf="c.couponName=='Snapdeal Coupon'" mat-card-sm-image src="../../../assets/snapdeal.png" >
+              <img  class="card-img-top" *ngIf="c.couponName=='Myntra Coupon'" mat-card-sm-image src="../../../assets/myntra.png" >
+              <img  class="card-img-top" *ngIf="c.couponName=='Zomato Coupon'" mat-card-sm-image src="../../../assets/zomato.png" >
+              <img  class="card-img-top" *ngIf="c.couponName=='Swiggy Coupon'" mat-card-sm-image src="../../../assets/swiggy.png" >
+                    <p class="card-text">{{c.desc}}</p>
+              <div class="example-label">Promo Code: </div>
+              <a [routerLink]="'/redirectCoupon/'+c.id" class="btn btn-primary" target="_blank">{{c.couponCode}}</a>
+                <button class="btn btn-primary shiftRight" (click)="getCoupon(c.id)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ </td>
+ </table>
+
+ <app-footer></app-footer>
